@@ -35,6 +35,4 @@ export class JsonPostRepository implements PostRepository {
   }
 }
 
-export const postRepository: PostRepository = new JsonPostRepository();
-
 // npx tsx src\repositories\post\json-post-repository.ts
