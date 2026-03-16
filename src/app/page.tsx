@@ -26,23 +26,7 @@ export default async function HomePage() {
             priority: true,
           }}
         />
-        <div className="flex flex-col gap-4 sm-justify-center">
-          <time
-            className="text-slate-600 block text-sm/tight"
-            dateTime="2025-04-20"
-          >
-            2025-04-20 10:00
-          </time>
-          <PostHeading as="h3" url="#">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          </PostHeading>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-            recusandae eos distinctio cupiditate qui necessitatibus praesentium?
-            Quidem incidunt cumque provident aliquam ipsa corrupti eos ratione
-            repellat hic obcaecati, quasi numquam?
-          </p>
-        </div>
+        
       </section>
 
       <Suspense fallback={<SpinLoader className="h-screen" />}>
