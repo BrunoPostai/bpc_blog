@@ -7,7 +7,7 @@ type PostDateProps = {
 export function PostDate({ dateTime }: PostDateProps) {
   return (
     <time
-      className="text-slate-600 text-sm/tight"
+      className="text-amber-500 text-sm/tight"
       dateTime={dateTime}
       title={formatDistanceToNow(dateTime)}
     >

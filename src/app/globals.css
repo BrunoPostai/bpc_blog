@@ -1,8 +1,69 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@layer base {
-  h1 {
-    font-size: unset;
-    font-weight: unset;
-  }
+@utility prose-roman {
+  /* Base text (soft marble) */
+  --tw-prose-body: var(--color-stone-300);
+
+  /* Headings (strong ivory) */
+  --tw-prose-headings: var(--color-stone-100);
+
+  /* Lead text */
+  --tw-prose-lead: var(--color-stone-400);
+
+  /* Links (gold accent) */
+  --tw-prose-links: var(--color-amber-400);
+
+  /* Bold */
+  --tw-prose-bold: var(--color-stone-100);
+
+  /* Lists */
+  --tw-prose-counters: var(--color-amber-500);
+  --tw-prose-bullets: var(--color-amber-400);
+
+  /* Dividers */
+  --tw-prose-hr: var(--color-stone-700);
+
+  /* Quotes */
+  --tw-prose-quotes: var(--color-stone-100);
+  --tw-prose-quote-borders: var(--color-amber-600);
+
+  /* Captions */
+  --tw-prose-captions: var(--color-stone-500);
+
+  /* Inline code */
+  --tw-prose-code: var(--color-amber-300);
+
+  /* Code blocks */
+  --tw-prose-pre-code: var(--color-stone-200);
+  --tw-prose-pre-bg: var(--color-stone-900);
+
+  /* Tables */
+  --tw-prose-th-borders: var(--color-stone-600);
+  --tw-prose-td-borders: var(--color-stone-700);
+
+  /* Invert (for dark mode – your main case) */
+  --tw-prose-invert-body: var(--color-stone-300);
+  --tw-prose-invert-headings: var(--color-stone-100);
+  --tw-prose-invert-lead: var(--color-stone-400);
+
+  --tw-prose-invert-links: var(--color-amber-400);
+  --tw-prose-invert-bold: var(--color-stone-100);
+
+  --tw-prose-invert-counters: var(--color-amber-500);
+  --tw-prose-invert-bullets: var(--color-amber-400);
+
+  --tw-prose-invert-hr: var(--color-stone-700);
+
+  --tw-prose-invert-quotes: var(--color-stone-100);
+  --tw-prose-invert-quote-borders: var(--color-amber-600);
+
+  --tw-prose-invert-captions: var(--color-stone-500);
+
+  --tw-prose-invert-code: var(--color-amber-300);
+  --tw-prose-invert-pre-code: var(--color-stone-200);
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+
+  --tw-prose-invert-th-borders: var(--color-stone-600);
+  --tw-prose-invert-td-borders: var(--color-stone-700);
 }
