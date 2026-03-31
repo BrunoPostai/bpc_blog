@@ -20,5 +20,3 @@ export function formatDistanceToNow(rawDate: string) {
 
 const rawDate = "2025-05-12T06:31:23.411Z";
 
-console.log(rawDate);
-console.log(formatDistanceToNow(rawDate));
