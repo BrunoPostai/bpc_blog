@@ -12,3 +12,5 @@ export const drizzleDb = drizzle(sqliteDatabase, {
   },
   logger: true,
 });
+
+console.log('DB PATH:', sqliteDatabasePath);
