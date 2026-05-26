@@ -1,19 +1,38 @@
 import { postRepository } from "@/repositories/post";
+import { formatHour } from "@/utils/format-datetime";
+import { cacheTag } from "next/cache";
 import { notFound } from "next/navigation";
-import { cache } from "react";
 
-export const findAllPublicPostsCached = cache(
-  async () => await postRepository.findAllPublic(),
-);
+export async function getCachedTime() {
+  "use cache";
+  cacheTag("posts");
 
-export const findPostBySlugCached = cache(async (slug: string) => {
-  const post = await postRepository.findBySlugPublic(slug).catch(() => undefined);
+  return formatHour(Date.now());
+}
 
-  if(!post) notFound();
+export async function findAllPublicPostsCached() {
+  "use cache";
+  cacheTag("posts");
+
+  return await postRepository.findAllPublic();
+}
+
+export async function findPostBySlugCached(slug: string) {
+  "use cache";
+  cacheTag(`post-${slug}`);
+
+  const post = await postRepository
+    .findBySlugPublic(slug)
+    .catch(() => undefined);
+
+  if (!post) notFound();
 
   return post;
-});
+}
 
-export const findPostByIdCached = cache(
-  async (id: string) => await postRepository.findById(id),
-);
+export async function findPostByIdCached(id: string) {
+  "use cache";
+  cacheTag(`post-id-${id}`);
+
+  return await postRepository.findById(id);
+}

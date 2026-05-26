@@ -1,10 +1,8 @@
 import {
   format,
   formatDistanceToNow as dateFnsFormatDistanceToNow,
-} from 'date-fns';
-import { ptBR } from 'date-fns/locale';
-import { unstable_cacheLife as cacheLife } from 'next/cache';
-import { unstable_cacheTag as cacheTag } from 'next/cache';
+} from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 export function formatDatetime(rawDate: string): string {
   const date = new Date(rawDate);
@@ -26,16 +24,7 @@ export function formatDistanceToNow(rawDate: string): string {
 export function formatHour(timestampMs: number): string {
   const date = new Date(timestampMs);
 
-  return format(date, 'HH:mm:ss', {
+  return format(date, "HH:mm:ss", {
     locale: ptBR,
   });
 }
-
-export async function formatHourCached() {
-  'use cache';
-  cacheLife('seconds');
-  cacheTag('formatHourCached');
-
-  return formatHour(Date.now());
-}
-

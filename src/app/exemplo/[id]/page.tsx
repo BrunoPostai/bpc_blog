@@ -1,8 +1,5 @@
 import { revalidateExampleAction } from "@/actions/revalidate-example";
-import { formatHourCached } from "@/utils/format-datetime";
-
-// export const dynamic = 'force-static';
-// export const revalidate = 30;
+import { getCachedTime } from "@/lib/post/queries";
 
 export default async function ExemploDynamicPage({
   params,
@@ -10,7 +7,9 @@ export default async function ExemploDynamicPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const hour = await formatHourCached();
+
+  // Call the cached function. This value will lock until revalidated!
+  const hour = await getCachedTime();
 
   return (
     <main className="min-h-150 text-4xl font-bold">
