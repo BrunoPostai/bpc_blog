@@ -16,15 +16,15 @@ export default function ErrorMessage({
       <title>{pageTitle}</title>
       <div
         className={clsx(
-          "min-h-90 bg-stone-900 text-slate-100",
-          "mb-16 p-8 rounded-xl",
+          "min-h-90 bg-roman-dark text-roman-marble",
+          "mb-16 p-8 rounded-xl border border-roman-red/30",
           "flex items-center justify-center",
           "text-center",
         )}
       >
         <div>
-          <h1 className="text-7xl/tight mb-4 font-extrabold">{contentTitle}</h1>
-          <div>{content}</div>
+          <h1 className="text-7xl/tight mb-4 font-extrabold text-roman-red">{contentTitle}</h1>
+          <div className="text-roman-gold/80">{content}</div>
         </div>
       </div>
     </>

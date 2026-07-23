@@ -4,7 +4,7 @@ import { PostRepository } from "./post-repository";
 import { readFile } from "fs/promises";
 
 const ROOT_DIR = process.cwd();
-const JSON_POST_FILE_PATH = resolve(
+export const JSON_POST_FILE_PATH = resolve(
   ROOT_DIR,
   "src",
   "db",

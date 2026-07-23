@@ -26,7 +26,7 @@ export async function SinglePost({ slug }: SinglePostProps) {
           {post.author} | <PostDate dateTime={post.createdAt} />
         </p>
       </header>
-      <p className="text-xl mb-4 text-stone-300">{post.excerpt}</p>
+      <p className="text-xl mb-4 text-roman-marble/80">{post.excerpt}</p>
 
       <SafeMarkdown markdown={post.content} />
     </article>

@@ -1,6 +1,7 @@
 "use client";
 
 import ErrorMessage from "@/components/ErrorMessage";
+import { romanize } from "romans";
 import { useEffect } from "react";
 
 type RootErrorProps = {
@@ -15,9 +16,9 @@ export default function RootErrorPage({ error }: RootErrorProps) {
   return (
     <>
       <ErrorMessage
-        pageTitle="Internal Server Error"
-        contentTitle="501"
-        content="An error has occured and your app cannot recover. Try again later."
+        pageTitle="Error Internus"
+        contentTitle={romanize(500)}
+        content="Error internus evenit. Resurgere conare postea."
       />
     </>
   );

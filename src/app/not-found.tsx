@@ -1,12 +1,13 @@
 import ErrorMessage from "@/components/ErrorMessage";
+import { romanize } from "romans";
 
 export default function NotFoundPage() {
   return (
     <>
       <ErrorMessage
-        pageTitle="PAGE NOT FOUND"
-        contentTitle="404"
-        content="404 ERROR - THE PAGE YOU'RE TRYING TO FIND DOES NOT EXIST"
+        pageTitle="PAGINA NON INVENTA"
+        contentTitle={romanize(404)}
+        content="PAGINA NON INVENTA — THE PAGE YOU SEEK DOES NOT EXIST"
       />
     </>
   );

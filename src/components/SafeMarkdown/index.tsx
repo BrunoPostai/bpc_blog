@@ -17,7 +17,7 @@ export function SafeMarkdown({ markdown }: SafeMarkdownProps) {
         "prose-a:transition",
         "prose-a:no-underline",
         "prose-a:hover:underline",
-        "prose-a:hover:text-amber-500",
+        "prose-a:hover:text-roman-gold-light",
         "prose-img:mx-auto",
         "md:prose-lg",
       )}

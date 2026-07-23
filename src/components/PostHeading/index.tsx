@@ -22,7 +22,7 @@ export function PostHeading({
 
   return (
     <Tag className={clsx(headingClassesMap[Tag], commonClasses)}>
-      <Link className="hover:text-white transition" href={url}>{children}</Link>
+      <Link className="text-roman-gold hover:text-roman-gold-light transition" href={url}>{children}</Link>
     </Tag>
   );
 }
